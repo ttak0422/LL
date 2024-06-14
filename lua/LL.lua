@@ -38,7 +38,7 @@ local function _3_(opts)
   local function _5_(level, label, ...)
     if (level >= targetLevel) then
       local info = debug.getinfo(2, "Sl")
-      local msg = string.format("[%-6s%s] %s: %s", label:upper(), os.date("%Y-%m-%d %H:%M:%S"), (info.short_src .. ":" .. info.currentline), toStr(...))
+      local msg = string.format("[%-6s%s] %s: %s\n", label:upper(), os.date("%Y-%m-%d %H:%M:%S"), (info.short_src .. ":" .. info.currentline), toStr(...))
       local _6_ = io.open(path, "a")
       _6_:write(msg)
       _6_:close()

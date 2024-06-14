@@ -20,7 +20,7 @@
                   doLog (fn [level label ...]
                           (if (>= level targetLevel)
                               (let [info (debug.getinfo 2 :Sl)
-                                    msg (string.format "[%-6s%s] %s: %s"
+                                    msg (string.format "[%-6s%s] %s: %s\n"
                                                        (label:upper)
                                                        (os.date "%Y-%m-%d %H:%M:%S")
                                                        (.. info.short_src ":"
